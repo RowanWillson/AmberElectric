@@ -35,12 +35,12 @@ MIT
 - [x] modularSmall complication
 - [ ] modularLarge complication
 - [ ] utilitarianSmall complication
-- [ ] utilitarianSmallFlat complication
+- [x] utilitarianSmallFlat complication
 - [ ] utilitarianLarge complication
-- [ ] extraLarge complication
+- [x] extraLarge complication
 - [ ] graphicCorner complication
 - [ ] graphicBezel complication
-- [ ] graphicCircular complication
+- [x] graphicCircular complication
 - [ ] graphicRectangular complication
 
 ## Developers
