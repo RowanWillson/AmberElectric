@@ -49,5 +49,23 @@ MIT
 
 This is not something I'll be maintaining full time, but I will regularly release updates to the App Store as patches come in.
 
-Please try to minimise external depedencies. I will consider adding Podfile if there's a really good reason, but ideally it stays as lightweight as possible and uses vanilla Apple SDK's where possible. This is to maximise long term support and for ease of development and the ability for others to make modifications like adding or tweaking WatchOS complications.
+Please try to minimise external depedencies. I will consider adding Podfile if there's a really good reason, but ideally it stays as lightweight as possible and uses vanilla Apple SDK's where possible. This is to maximise long term support and for ease of development and the ability for others to make modifications.
 
+**Install Instructions** (I think...!)
+- Clone repo
+- Open xcodeproj file in latest XCode11+
+- Change team identifier to your own in all extensions (don't check in changes to this)
+- You may need to change the BundleID to something unique (don't check in changes to this)
+
+Please update this README if my install instructions don't work for you.
+
+I'm not using any linting here but please keep code style similar for consistency.
+
+**Things that probably need doing**
+- Saving user credentials in Keychain instead of UserDefaults
+- WatchOS should be independent and allow sign-in directly from Watch rather than requiring iPhone sending it.
+- Main WatchOS app should be better. Right now I've prioritised the complications that I use, and I don't use the main app.
+- More WatchOS complications.
+- Historical Usage. I have the API reading these from the Amber API (disabled...) but no UI implemented.
+- iPad support with flattened views. Probably only useful once Historical usage implemented.
+- MacOS support (bonus points for top toolbar widget!)
