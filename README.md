@@ -22,6 +22,8 @@ MIT
 **iOS Features**
 - [x] Live price
 - [x] Predicted Prices (30min increments)
+- [x] Background fetch
+- [x] Local Notification when prices below $0.00
 - [ ] Historical prices
 - [ ] Historical account usage
 - [ ] Localization
