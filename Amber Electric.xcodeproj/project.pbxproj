@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9194A0F23213FD30071B558 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9194A0E23213FD30071B558 /* Complication.swift */; };
+		D91986EF23208DC7003D19DF /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91986EE23208DC7003D19DF /* WatchConnectivity.swift */; };
+		D91986F123208E66003D19DF /* PhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91986F023208E66003D19DF /* PhoneConnectivity.swift */; };
+		D91BD1A4231E7B8B00929AB6 /* PriceDeconstructedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A3231E7B8B00929AB6 /* PriceDeconstructedView.swift */; };
+		D91BD1A6231E80AA00929AB6 /* PredictedPricesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A5231E80AA00929AB6 /* PredictedPricesScrollView.swift */; };
+		D91BD1A8231F33CC00929AB6 /* HistoricalPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A7231F33CC00929AB6 /* HistoricalPriceView.swift */; };
+		D928EB802324EA5400925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
+		D928EB812324EA5500925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
+		D928EB822324EA5600925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
+		D968BD64231A814A00F91CD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD63231A814A00F91CD1 /* AppDelegate.swift */; };
+		D968BD66231A814A00F91CD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD65231A814A00F91CD1 /* MainViewController.swift */; };
+		D968BD69231A814A00F91CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D968BD67231A814A00F91CD1 /* Main.storyboard */; };
+		D968BD6B231A814C00F91CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D968BD6A231A814C00F91CD1 /* Assets.xcassets */; };
+		D968BD6E231A814C00F91CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D968BD6C231A814C00F91CD1 /* LaunchScreen.storyboard */; };
+		D968BD7C231A982A00F91CD1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D968BD7B231A982A00F91CD1 /* NotificationCenter.framework */; };
+		D968BD7F231A982A00F91CD1 /* AmberWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD7E231A982A00F91CD1 /* AmberWidgetViewController.swift */; };
+		D968BD86231A982A00F91CD1 /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D968BD79231A982A00F91CD1 /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D968BD8C231A986000F91CD1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8B231A986000F91CD1 /* Network.swift */; };
+		D968BD8D231A986600F91CD1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8B231A986000F91CD1 /* Network.swift */; };
+		D968BD8F231A9BFF00F91CD1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8E231A9BFF00F91CD1 /* Common.swift */; };
+		D968BD90231A9BFF00F91CD1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8E231A9BFF00F91CD1 /* Common.swift */; };
+		D968BD92231BDE1900F91CD1 /* PriceCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD91231BDE1900F91CD1 /* PriceCircleView.swift */; };
+		D968BD93231BDE1900F91CD1 /* PriceCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD91231BDE1900F91CD1 /* PriceCircleView.swift */; };
+		D968BD9A231C8D3300F91CD1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD99231C8D3300F91CD1 /* LoginViewController.swift */; };
+		D968BD9D231D602B00F91CD1 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BD9C231D602B00F91CD1 /* WorkSans-Bold.ttf */; };
+		D968BD9E231D602B00F91CD1 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BD9C231D602B00F91CD1 /* WorkSans-Bold.ttf */; };
+		D968BDA0231D61AF00F91CD1 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BD9F231D61AF00F91CD1 /* WorkSans-Regular.ttf */; };
+		D968BDA1231D61AF00F91CD1 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BD9F231D61AF00F91CD1 /* WorkSans-Regular.ttf */; };
+		D968BDA3231D626100F91CD1 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BDA2231D626100F91CD1 /* WorkSans-Medium.ttf */; };
+		D968BDA4231D626100F91CD1 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D968BDA2231D626100F91CD1 /* WorkSans-Medium.ttf */; };
+		D9C251422320813A00D7F91C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C251402320813A00D7F91C /* Interface.storyboard */; };
+		D9C251442320813A00D7F91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C251432320813A00D7F91C /* Assets.xcassets */; };
+		D9C2514B2320813A00D7F91C /* Amber-WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D9C2514A2320813A00D7F91C /* Amber-WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9C251502320813A00D7F91C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2514F2320813A00D7F91C /* InterfaceController.swift */; };
+		D9C251522320813A00D7F91C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C251512320813A00D7F91C /* ExtensionDelegate.swift */; };
+		D9C251542320813B00D7F91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C251532320813B00D7F91C /* Assets.xcassets */; };
+		D9C251582320813B00D7F91C /* Amber-WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D9C2513E2320813900D7F91C /* Amber-WatchApp.app */; };
+		D9C251612320816500D7F91C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8B231A986000F91CD1 /* Network.swift */; };
+		D9C251622320816B00D7F91C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968BD8E231A9BFF00F91CD1 /* Common.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D968BD84231A982A00F91CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D968BD58231A814A00F91CD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D968BD78231A982A00F91CD1;
+			remoteInfo = TodayExtension;
+		};
+		D9C2514C2320813A00D7F91C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D968BD58231A814A00F91CD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9C251492320813A00D7F91C;
+			remoteInfo = "Amber-WatchApp Extension";
+		};
+		D9C251562320813B00D7F91C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D968BD58231A814A00F91CD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9C2513D2320813900D7F91C;
+			remoteInfo = "Amber-WatchApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D968BD8A231A982A00F91CD1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D968BD86231A982A00F91CD1 /* TodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C2515E2320813B00D7F91C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D9C2514B2320813A00D7F91C /* Amber-WatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C251602320813B00D7F91C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D9C251582320813B00D7F91C /* Amber-WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D9018D7523212A6000BC39EF /* Amber-WatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Amber-WatchApp.entitlements"; sourceTree = "<group>"; };
+		D9194A0E23213FD30071B558 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
+		D91986EE23208DC7003D19DF /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
+		D91986F023208E66003D19DF /* PhoneConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivity.swift; sourceTree = "<group>"; };
+		D91BD1A3231E7B8B00929AB6 /* PriceDeconstructedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDeconstructedView.swift; sourceTree = "<group>"; };
+		D91BD1A5231E80AA00929AB6 /* PredictedPricesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedPricesScrollView.swift; sourceTree = "<group>"; };
+		D91BD1A7231F33CC00929AB6 /* HistoricalPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceView.swift; sourceTree = "<group>"; };
+		D94EC3062320856F00A60426 /* Amber-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Amber-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
+		D968BD60231A814A00F91CD1 /* Amber Electric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amber Electric.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D968BD63231A814A00F91CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D968BD65231A814A00F91CD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D968BD68231A814A00F91CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D968BD6A231A814C00F91CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D968BD6D231A814C00F91CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D968BD6F231A814C00F91CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D968BD79231A982A00F91CD1 /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D968BD7B231A982A00F91CD1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D968BD7E231A982A00F91CD1 /* AmberWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetViewController.swift; sourceTree = "<group>"; };
+		D968BD83231A982A00F91CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D968BD8B231A986000F91CD1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D968BD8E231A9BFF00F91CD1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		D968BD91231BDE1900F91CD1 /* PriceCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCircleView.swift; sourceTree = "<group>"; };
+		D968BD95231BED8900F91CD1 /* Amber Electric.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Amber Electric.entitlements"; sourceTree = "<group>"; };
+		D968BD96231BED9200F91CD1 /* TodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExtension.entitlements; sourceTree = "<group>"; };
+		D968BD99231C8D3300F91CD1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D968BD9C231D602B00F91CD1 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		D968BD9F231D61AF00F91CD1 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		D968BDA2231D626100F91CD1 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		D9C2513E2320813900D7F91C /* Amber-WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amber-WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C251412320813A00D7F91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D9C251432320813A00D7F91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9C251452320813A00D7F91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C2514A2320813A00D7F91C /* Amber-WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Amber-WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C2514F2320813A00D7F91C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D9C251512320813A00D7F91C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D9C251532320813B00D7F91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9C251552320813B00D7F91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9DF2F242323624600B64CE4 /* BinaryCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B625DDECEBB676DF2DF56F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D968BD5D231A814A00F91CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D968BD76231A982A00F91CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D968BD7C231A982A00F91CD1 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C251472320813A00D7F91C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D968BD57231A814A00F91CD1 = {
+			isa = PBXGroup;
+			children = (
+				D968BDA5231D628500F91CD1 /* Fonts */,
+				D968BD62231A814A00F91CD1 /* Amber Electric */,
+				D968BD7D231A982A00F91CD1 /* TodayExtension */,
+				D9C2513F2320813900D7F91C /* Amber-WatchApp */,
+				D9C2514E2320813A00D7F91C /* Amber-WatchApp Extension */,
+				D968BD7A231A982A00F91CD1 /* Frameworks */,
+				D968BD61231A814A00F91CD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D968BD61231A814A00F91CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD60231A814A00F91CD1 /* Amber Electric.app */,
+				D968BD79231A982A00F91CD1 /* TodayExtension.appex */,
+				D9C2513E2320813900D7F91C /* Amber-WatchApp.app */,
+				D9C2514A2320813A00D7F91C /* Amber-WatchApp Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D968BD62231A814A00F91CD1 /* Amber Electric */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD8E231A9BFF00F91CD1 /* Common.swift */,
+				D9DF2F242323624600B64CE4 /* BinaryCodable.swift */,
+				D968BD97231C8D0400F91CD1 /* Views */,
+				D968BD95231BED8900F91CD1 /* Amber Electric.entitlements */,
+				D968BD63231A814A00F91CD1 /* AppDelegate.swift */,
+				D968BD8B231A986000F91CD1 /* Network.swift */,
+				D91986EE23208DC7003D19DF /* WatchConnectivity.swift */,
+				D968BD67231A814A00F91CD1 /* Main.storyboard */,
+				D968BD6A231A814C00F91CD1 /* Assets.xcassets */,
+				D968BD6C231A814C00F91CD1 /* LaunchScreen.storyboard */,
+				D968BD6F231A814C00F91CD1 /* Info.plist */,
+			);
+			path = "Amber Electric";
+			sourceTree = "<group>";
+		};
+		D968BD7A231A982A00F91CD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD7B231A982A00F91CD1 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D968BD7D231A982A00F91CD1 /* TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD96231BED9200F91CD1 /* TodayExtension.entitlements */,
+				D968BD7E231A982A00F91CD1 /* AmberWidgetViewController.swift */,
+				D968BD83231A982A00F91CD1 /* Info.plist */,
+			);
+			path = TodayExtension;
+			sourceTree = "<group>";
+		};
+		D968BD97231C8D0400F91CD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD65231A814A00F91CD1 /* MainViewController.swift */,
+				D968BD99231C8D3300F91CD1 /* LoginViewController.swift */,
+				D968BD91231BDE1900F91CD1 /* PriceCircleView.swift */,
+				D91BD1A3231E7B8B00929AB6 /* PriceDeconstructedView.swift */,
+				D91BD1A5231E80AA00929AB6 /* PredictedPricesScrollView.swift */,
+				D91BD1A7231F33CC00929AB6 /* HistoricalPriceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D968BDA5231D628500F91CD1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D968BD9C231D602B00F91CD1 /* WorkSans-Bold.ttf */,
+				D968BDA2231D626100F91CD1 /* WorkSans-Medium.ttf */,
+				D968BD9F231D61AF00F91CD1 /* WorkSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D9C2513F2320813900D7F91C /* Amber-WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				D9018D7523212A6000BC39EF /* Amber-WatchApp.entitlements */,
+				D9C251402320813A00D7F91C /* Interface.storyboard */,
+				D9C251432320813A00D7F91C /* Assets.xcassets */,
+				D9C251452320813A00D7F91C /* Info.plist */,
+			);
+			path = "Amber-WatchApp";
+			sourceTree = "<group>";
+		};
+		D9C2514E2320813A00D7F91C /* Amber-WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D94EC3062320856F00A60426 /* Amber-WatchApp Extension.entitlements */,
+				D9C2514F2320813A00D7F91C /* InterfaceController.swift */,
+				D91986F023208E66003D19DF /* PhoneConnectivity.swift */,
+				D9194A0E23213FD30071B558 /* Complication.swift */,
+				D9C251512320813A00D7F91C /* ExtensionDelegate.swift */,
+				D9C251532320813B00D7F91C /* Assets.xcassets */,
+				D9C251552320813B00D7F91C /* Info.plist */,
+			);
+			path = "Amber-WatchApp Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D968BD5F231A814A00F91CD1 /* Amber Electric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D968BD72231A814C00F91CD1 /* Build configuration list for PBXNativeTarget "Amber Electric" */;
+			buildPhases = (
+				D968BD5C231A814A00F91CD1 /* Sources */,
+				D968BD5D231A814A00F91CD1 /* Frameworks */,
+				D968BD5E231A814A00F91CD1 /* Resources */,
+				D968BD8A231A982A00F91CD1 /* Embed App Extensions */,
+				D9C251602320813B00D7F91C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D968BD85231A982A00F91CD1 /* PBXTargetDependency */,
+				D9C251572320813B00D7F91C /* PBXTargetDependency */,
+			);
+			name = "Amber Electric";
+			productName = "Amber Electric";
+			productReference = D968BD60231A814A00F91CD1 /* Amber Electric.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D968BD78231A982A00F91CD1 /* TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D968BD87231A982A00F91CD1 /* Build configuration list for PBXNativeTarget "TodayExtension" */;
+			buildPhases = (
+				D968BD75231A982A00F91CD1 /* Sources */,
+				D968BD76231A982A00F91CD1 /* Frameworks */,
+				D968BD77231A982A00F91CD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtension;
+			productName = TodayExtension;
+			productReference = D968BD79231A982A00F91CD1 /* TodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D9C2513D2320813900D7F91C /* Amber-WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C2515F2320813B00D7F91C /* Build configuration list for PBXNativeTarget "Amber-WatchApp" */;
+			buildPhases = (
+				D9C2513C2320813900D7F91C /* Resources */,
+				D9C2515E2320813B00D7F91C /* Embed App Extensions */,
+				B625DDECEBB676DF2DF56F92 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9C2514D2320813A00D7F91C /* PBXTargetDependency */,
+			);
+			name = "Amber-WatchApp";
+			productName = "Amber-WatchApp";
+			productReference = D9C2513E2320813900D7F91C /* Amber-WatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D9C251492320813A00D7F91C /* Amber-WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C2515D2320813B00D7F91C /* Build configuration list for PBXNativeTarget "Amber-WatchApp Extension" */;
+			buildPhases = (
+				D9C251462320813A00D7F91C /* Sources */,
+				D9C251472320813A00D7F91C /* Frameworks */,
+				D9C251482320813A00D7F91C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Amber-WatchApp Extension";
+			productName = "Amber-WatchApp Extension";
+			productReference = D9C2514A2320813A00D7F91C /* Amber-WatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D968BD58231A814A00F91CD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Rowan Willson";
+				TargetAttributes = {
+					D968BD5F231A814A00F91CD1 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					D968BD78231A982A00F91CD1 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					D9C2513D2320813900D7F91C = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					D9C251492320813A00D7F91C = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D968BD5B231A814A00F91CD1 /* Build configuration list for PBXProject "Amber Electric" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D968BD57231A814A00F91CD1;
+			productRefGroup = D968BD61231A814A00F91CD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D968BD5F231A814A00F91CD1 /* Amber Electric */,
+				D968BD78231A982A00F91CD1 /* TodayExtension */,
+				D9C2513D2320813900D7F91C /* Amber-WatchApp */,
+				D9C251492320813A00D7F91C /* Amber-WatchApp Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D968BD5E231A814A00F91CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D968BD6E231A814C00F91CD1 /* LaunchScreen.storyboard in Resources */,
+				D968BDA3231D626100F91CD1 /* WorkSans-Medium.ttf in Resources */,
+				D968BD6B231A814C00F91CD1 /* Assets.xcassets in Resources */,
+				D968BD69231A814A00F91CD1 /* Main.storyboard in Resources */,
+				D968BD9D231D602B00F91CD1 /* WorkSans-Bold.ttf in Resources */,
+				D968BDA0231D61AF00F91CD1 /* WorkSans-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D968BD77231A982A00F91CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D968BD9E231D602B00F91CD1 /* WorkSans-Bold.ttf in Resources */,
+				D968BDA4231D626100F91CD1 /* WorkSans-Medium.ttf in Resources */,
+				D968BDA1231D61AF00F91CD1 /* WorkSans-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C2513C2320813900D7F91C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C251442320813A00D7F91C /* Assets.xcassets in Resources */,
+				D9C251422320813A00D7F91C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C251482320813A00D7F91C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C251542320813B00D7F91C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D968BD5C231A814A00F91CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D91986EF23208DC7003D19DF /* WatchConnectivity.swift in Sources */,
+				D91BD1A4231E7B8B00929AB6 /* PriceDeconstructedView.swift in Sources */,
+				D968BD9A231C8D3300F91CD1 /* LoginViewController.swift in Sources */,
+				D968BD8F231A9BFF00F91CD1 /* Common.swift in Sources */,
+				D968BD66231A814A00F91CD1 /* MainViewController.swift in Sources */,
+				D968BD92231BDE1900F91CD1 /* PriceCircleView.swift in Sources */,
+				D928EB802324EA5400925820 /* BinaryCodable.swift in Sources */,
+				D968BD64231A814A00F91CD1 /* AppDelegate.swift in Sources */,
+				D91BD1A8231F33CC00929AB6 /* HistoricalPriceView.swift in Sources */,
+				D91BD1A6231E80AA00929AB6 /* PredictedPricesScrollView.swift in Sources */,
+				D968BD8C231A986000F91CD1 /* Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D968BD75231A982A00F91CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D968BD93231BDE1900F91CD1 /* PriceCircleView.swift in Sources */,
+				D968BD8D231A986600F91CD1 /* Network.swift in Sources */,
+				D928EB812324EA5500925820 /* BinaryCodable.swift in Sources */,
+				D968BD90231A9BFF00F91CD1 /* Common.swift in Sources */,
+				D968BD7F231A982A00F91CD1 /* AmberWidgetViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C251462320813A00D7F91C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D91986F123208E66003D19DF /* PhoneConnectivity.swift in Sources */,
+				D928EB822324EA5600925820 /* BinaryCodable.swift in Sources */,
+				D9C251622320816B00D7F91C /* Common.swift in Sources */,
+				D9C251522320813A00D7F91C /* ExtensionDelegate.swift in Sources */,
+				D9C251502320813A00D7F91C /* InterfaceController.swift in Sources */,
+				D9C251612320816500D7F91C /* Network.swift in Sources */,
+				D9194A0F23213FD30071B558 /* Complication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D968BD85231A982A00F91CD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D968BD78231A982A00F91CD1 /* TodayExtension */;
+			targetProxy = D968BD84231A982A00F91CD1 /* PBXContainerItemProxy */;
+		};
+		D9C2514D2320813A00D7F91C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9C251492320813A00D7F91C /* Amber-WatchApp Extension */;
+			targetProxy = D9C2514C2320813A00D7F91C /* PBXContainerItemProxy */;
+		};
+		D9C251572320813B00D7F91C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9C2513D2320813900D7F91C /* Amber-WatchApp */;
+			targetProxy = D9C251562320813B00D7F91C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D968BD67231A814A00F91CD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D968BD68231A814A00F91CD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D968BD6C231A814C00F91CD1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D968BD6D231A814C00F91CD1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D9C251402320813A00D7F91C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9C251412320813A00D7F91C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D968BD70231A814C00F91CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D968BD71231A814C00F91CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D968BD73231A814C00F91CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Amber Electric/Amber Electric.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = "Amber Electric/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D968BD74231A814C00F91CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Amber Electric/Amber Electric.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = "Amber Electric/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D968BD88231A982A00F91CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.TodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D968BD89231A982A00F91CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.TodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D9C251592320813B00D7F91C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp/Amber-WatchApp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				IBSC_MODULE = Amber_WatchApp_Extension;
+				INFOPLIST_FILE = "Amber-WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		D9C2515A2320813B00D7F91C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp/Amber-WatchApp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				IBSC_MODULE = Amber_WatchApp_Extension;
+				INFOPLIST_FILE = "Amber-WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		D9C2515B2320813B00D7F91C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp Extension/Amber-WatchApp Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = "Amber-WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		D9C2515C2320813B00D7F91C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp Extension/Amber-WatchApp Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
+				INFOPLIST_FILE = "Amber-WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amber.AmberElectric.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D968BD5B231A814A00F91CD1 /* Build configuration list for PBXProject "Amber Electric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D968BD70231A814C00F91CD1 /* Debug */,
+				D968BD71231A814C00F91CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D968BD72231A814C00F91CD1 /* Build configuration list for PBXNativeTarget "Amber Electric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D968BD73231A814C00F91CD1 /* Debug */,
+				D968BD74231A814C00F91CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D968BD87231A982A00F91CD1 /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D968BD88231A982A00F91CD1 /* Debug */,
+				D968BD89231A982A00F91CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C2515D2320813B00D7F91C /* Build configuration list for PBXNativeTarget "Amber-WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C2515B2320813B00D7F91C /* Debug */,
+				D9C2515C2320813B00D7F91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C2515F2320813B00D7F91C /* Build configuration list for PBXNativeTarget "Amber-WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C251592320813B00D7F91C /* Debug */,
+				D9C2515A2320813B00D7F91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D968BD58231A814A00F91CD1 /* Project object */;
+}
