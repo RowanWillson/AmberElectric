@@ -38,7 +38,8 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
      */
     func transferToWatch(userInfo: [String : Any]) {
         if let session = validSession, session.activationState == .activated {
-            session.transferUserInfo(userInfo)  //send immediately if connected
+            try? session.updateApplicationContext(userInfo)
+            //session.transferUserInfo(userInfo)  //send immediately if connected
         } else {
             dataToSend = userInfo  //otherwise queue for sending once didComplete delegate method is called. Only handles 1 item.
         } 
@@ -66,11 +67,11 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        
+        // empty
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        
+        // empty
     }
     
 }

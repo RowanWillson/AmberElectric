@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch44" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,10 +14,12 @@
                     <items>
                         <group width="1" height="1" heightAdjustment="-15" alignment="center" verticalAlignment="center" contentMode="center" layout="vertical" radius="70" spacing="0.0" id="297-IS-CEg">
                             <items>
-                                <label width="1" height="1" alignment="center" verticalAlignment="center" textAlignment="center" id="64l-pM-n0T">
+                                <label alignment="center" verticalAlignment="center" textAlignment="center" id="VVV-yr-ljt" userLabel="Renewables"/>
+                                <label alignment="center" verticalAlignment="center" textAlignment="center" id="64l-pM-n0T">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="70"/>
                                 </label>
+                                <label alignment="center" verticalAlignment="center" hidden="YES" text="/kWh" textAlignment="center" id="hbY-BG-Hwd"/>
                             </items>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
@@ -27,10 +27,42 @@
                     </items>
                     <connections>
                         <outlet property="circle" destination="297-IS-CEg" id="byz-Ap-G1m"/>
+                        <outlet property="kWhLabel" destination="hbY-BG-Hwd" id="bJ1-7F-NYg"/>
                         <outlet property="mainLabel" destination="64l-pM-n0T" id="Zjh-rN-lfw"/>
+                        <outlet property="renewablesLabel" destination="VVV-yr-ljt" id="K8T-Yx-TX0"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="139" y="99"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="VLT-Lu-rht">
+            <objects>
+                <controller identifier="Login" title="Login" hidesWhenLoading="NO" id="mYe-xf-zwM" customClass="LoginInterfaceController" customModule="Amber_WatchApp_Extension">
+                    <items>
+                        <textField width="1" alignment="left" placeholder="Email" textContentType="email" id="fdd-wD-4hW">
+                            <connections>
+                                <action selector="emailTextFieldAction:" destination="mYe-xf-zwM" id="dod-O1-3NA"/>
+                            </connections>
+                        </textField>
+                        <textField width="1" alignment="left" placeholder="Password" textContentType="password" secureTextEntry="YES" id="1Fo-2g-ceV">
+                            <connections>
+                                <action selector="passwordTextFieldAction:" destination="mYe-xf-zwM" id="pPX-iH-Ct6"/>
+                            </connections>
+                        </textField>
+                        <button width="1" alignment="left" title="Login" id="gg7-0M-RWe">
+                            <connections>
+                                <action selector="loginPressed" destination="mYe-xf-zwM" id="Jup-zW-0bi"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="emailTextField" destination="fdd-wD-4hW" id="ozX-UG-OfJ"/>
+                        <outlet property="passwordTextField" destination="1Fo-2g-ceV" id="stw-9e-ZNs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="373" y="99"/>
         </scene>
     </scenes>
 </document>

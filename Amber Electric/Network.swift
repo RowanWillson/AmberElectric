@@ -106,7 +106,7 @@ extension AmberAPIDelegate {
 /* Singleton network class. Call AmberAPI.shared.update() to use it.
   Will login, download prices and call delegate throughout.
   Data is serialised and cached to disk via UserDefaults.
-  This class will update itself every half hour with a timer.
+  This class will update itself every half hour with a timer (e.g. as Kiosk).
   Note: iOS Background app refresh should also call update() */
 class AmberAPI {
     

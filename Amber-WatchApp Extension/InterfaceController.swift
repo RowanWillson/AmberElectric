@@ -14,6 +14,12 @@ class InterfaceController: WKInterfaceController, AmberAPIDelegate {
 
     @IBOutlet weak var mainLabel: WKInterfaceLabel!
     @IBOutlet weak var circle: WKInterfaceGroup!
+    @IBOutlet weak var renewablesLabel: WKInterfaceLabel!
+    @IBOutlet weak var kWhLabel: WKInterfaceLabel!
+    
+    private var shouldPresentLoginViewOnAppear = false
+    private var shouldUpdateDataOnAppear = false
+    private var isSelfInitialisedAndVisible = false
     
     let watchSessionManager = WatchSessionManager.sharedManager 
 
@@ -33,9 +39,7 @@ class InterfaceController: WKInterfaceController, AmberAPIDelegate {
 
         AmberAPI.shared.update { (result) in
             if result == .failWrongCredentials {
-                // Display error to user. Keep messages short to fit on Watch.
-                let okAction = WKAlertAction(title: "Ok", style: .default, handler: {})
-                self.presentAlert(withTitle: "Error", message: "Auth error. Open iPhone app.", preferredStyle: .alert, actions: [okAction])
+                // Handled below by delegate (not required in this completion handler)
             } else if result == .failOther {
                 let okAction = WKAlertAction(title: "Ok", style: .default, handler: {})
                 self.presentAlert(withTitle: "Error", message: "Connection error", preferredStyle: .alert, actions: [okAction])
@@ -47,25 +51,59 @@ class InterfaceController: WKInterfaceController, AmberAPIDelegate {
         }
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-    
-    
-    // MARK: - AmberAPI Delegate Methods
-    
-    func updatePrices() {
-        // Update interface
-        if let data = AmberAPI.shared.currentPriceData?.data {
-            let priceRounded = Int(data.currentPriceKWH)
-            self.mainLabel.setText("\(priceRounded)¢")
-            self.circle.setBackgroundColor(Appearance.circleColour(from: data.currentPriceColor))
+    override func didAppear() {
+        isSelfInitialisedAndVisible = true
+        
+        if shouldPresentLoginViewOnAppear {
+            shouldPresentLoginViewOnAppear = false
+            presentLoginView()
+        }
+        
+        if shouldUpdateDataOnAppear, let data = AmberAPI.shared.currentPriceData?.data  {
+            shouldUpdateDataOnAppear = false
+            updateInterface(withData: data)
         }
     }
     
+    override func willDisappear() {
+        isSelfInitialisedAndVisible = false
+    }
+    
+    // MARK: - AmberAPI Delegate Methods
+    
+    // Update interface with new data now, or if interface not yet ready, on next didAppear()
+    func updatePrices() {
+        if isSelfInitialisedAndVisible, let data = AmberAPI.shared.currentPriceData?.data {
+            updateInterface(withData: data) // Update now
+        } else {
+            shouldUpdateDataOnAppear = true
+        }
+    }
+    
+    // Schedule to show login screen on didAppear()
     func updateLoginDetails(requiresNewUserCredentials: Bool) {
-        // Not implemented on Watch (doesn't show username/email in UI)
+        if isSelfInitialisedAndVisible && requiresNewUserCredentials {
+            // Present now
+            presentLoginView()
+        } else {
+            // Present after next didAppear()
+            shouldPresentLoginViewOnAppear = requiresNewUserCredentials
+        }
+    }
+    
+    // MARK: View and Data Presentation
+    
+    private func presentLoginView() {
+        self.presentController(withName: "Login", context: nil)
+    }
+    
+    private func updateInterface(withData data : CurrentPriceData.PriceData) {
+        let priceRounded = Int(data.currentPriceKWH)
+        self.mainLabel.setText("\(priceRounded)¢")
+        self.kWhLabel.setHidden(false)
+        let renewableRounded = Int(data.currentRenewableInGrid)
+        self.renewablesLabel.setText("Clean \(renewableRounded)%")
+        self.circle.setBackgroundColor(Appearance.circleColour(from: data.currentPriceColor))
     }
 
 }

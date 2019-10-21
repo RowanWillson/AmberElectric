@@ -13,6 +13,7 @@
 		D91BD1A4231E7B8B00929AB6 /* PriceDeconstructedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A3231E7B8B00929AB6 /* PriceDeconstructedView.swift */; };
 		D91BD1A6231E80AA00929AB6 /* PredictedPricesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A5231E80AA00929AB6 /* PredictedPricesScrollView.swift */; };
 		D91BD1A8231F33CC00929AB6 /* HistoricalPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD1A7231F33CC00929AB6 /* HistoricalPriceView.swift */; };
+		D91F6F0B235AC842009E19AA /* LoginInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91F6F0A235AC842009E19AA /* LoginInterfaceController.swift */; };
 		D928EB802324EA5400925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
 		D928EB812324EA5500925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
 		D928EB822324EA5600925820 /* BinaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF2F242323624600B64CE4 /* BinaryCodable.swift */; };
@@ -116,6 +117,7 @@
 		D91BD1A3231E7B8B00929AB6 /* PriceDeconstructedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDeconstructedView.swift; sourceTree = "<group>"; };
 		D91BD1A5231E80AA00929AB6 /* PredictedPricesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictedPricesScrollView.swift; sourceTree = "<group>"; };
 		D91BD1A7231F33CC00929AB6 /* HistoricalPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceView.swift; sourceTree = "<group>"; };
+		D91F6F0A235AC842009E19AA /* LoginInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInterfaceController.swift; sourceTree = "<group>"; };
 		D94EC3062320856F00A60426 /* Amber-WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Amber-WatchApp Extension.entitlements"; sourceTree = "<group>"; };
 		D968BD60231A814A00F91CD1 /* Amber Electric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amber Electric.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D968BD63231A814A00F91CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				D94EC3062320856F00A60426 /* Amber-WatchApp Extension.entitlements */,
 				D9C2514F2320813A00D7F91C /* InterfaceController.swift */,
+				D91F6F0A235AC842009E19AA /* LoginInterfaceController.swift */,
 				D91986F023208E66003D19DF /* PhoneConnectivity.swift */,
 				D9194A0E23213FD30071B558 /* Complication.swift */,
 				D9C251512320813A00D7F91C /* ExtensionDelegate.swift */,
@@ -522,6 +525,7 @@
 				D9C251502320813A00D7F91C /* InterfaceController.swift in Sources */,
 				D9C251612320816500D7F91C /* Network.swift in Sources */,
 				D9194A0F23213FD30071B558 /* Complication.swift in Sources */,
+				D91F6F0B235AC842009E19AA /* LoginInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Amber Electric/Amber Electric.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = "Amber Electric/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -717,6 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Amber Electric/Amber Electric.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = "Amber Electric/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -736,6 +742,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -757,6 +764,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -780,6 +788,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp/Amber-WatchApp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				IBSC_MODULE = Amber_WatchApp_Extension;
 				INFOPLIST_FILE = "Amber-WatchApp/Info.plist";
@@ -789,7 +798,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -800,6 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp/Amber-WatchApp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				IBSC_MODULE = Amber_WatchApp_Extension;
 				INFOPLIST_FILE = "Amber-WatchApp/Info.plist";
@@ -809,7 +819,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -819,6 +829,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp Extension/Amber-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = "Amber-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -832,7 +843,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -842,6 +853,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Amber-WatchApp Extension/Amber-WatchApp Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6HYQW8Q2X2;
 				INFOPLIST_FILE = "Amber-WatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,7 +867,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};

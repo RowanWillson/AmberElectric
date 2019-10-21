@@ -38,6 +38,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         // API Class loads latest cached data (from UserDefaults) on init:
         let priceData = AmberAPI.shared.currentPriceData?.data
         let priceColour = Appearance.circleColour(from: priceData?.currentPriceColor) ?? Appearance.amberGrayInactive
+        let renewablePercentage : Float = min (Float(priceData?.currentRenewableInGrid ?? 100.0) * 0.01, 1.0)  //between 0.0 and 1.0
         var text = "⚡"
         if let price = priceData?.currentPriceKWH {
             text = "\(Int(price))¢"
@@ -80,6 +81,19 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let template = CLKComplicationTemplateGraphicCircularOpenGaugeSimpleText()
             template.tintColor = priceColour
             template.centerTextProvider = textProvider
+            let bottomTextProvider = CLKSimpleTextProvider(text: "kWh")
+            template.bottomTextProvider = bottomTextProvider
+            let gaugeProvider = CLKSimpleGaugeProvider(style: .ring, gaugeColor: priceColour, fillFraction: renewablePercentage)
+            template.gaugeProvider = gaugeProvider
+            let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(entry)
+            
+        case .graphicCorner:
+            let template = CLKComplicationTemplateGraphicCornerGaugeText()
+            template.tintColor = priceColour
+            template.outerTextProvider = textProvider
+            let gaugeProvider = CLKSimpleGaugeProvider(style: .ring, gaugeColor: priceColour, fillFraction: renewablePercentage)
+            template.gaugeProvider = gaugeProvider
             let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(entry)
             

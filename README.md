@@ -29,8 +29,8 @@ MIT
 - [ ] Localization
 
 **WatchOS Features & Complications**
-- [ ] Native login on WatchApp (currently uses WCSession to use iPhone login credentials)
-- [ ] Standalone WatchApp support
+- [x] Native login on WatchApp
+- [x] Standalone WatchApp support
 - [x] Watch app (limited functionality - can be better)
 - [x] Background fetch
 - [x] circularSmall complication
@@ -40,7 +40,7 @@ MIT
 - [x] utilitarianSmallFlat complication
 - [ ] utilitarianLarge complication
 - [x] extraLarge complication
-- [ ] graphicCorner complication
+- [x] graphicCorner complication
 - [ ] graphicBezel complication
 - [x] graphicCircular complication
 - [ ] graphicRectangular complication
@@ -63,7 +63,6 @@ I'm not using any linting here but please keep code style similar for consistenc
 
 **Things that probably need doing**
 - Saving user credentials in Keychain instead of UserDefaults
-- WatchOS should be independent and allow sign-in directly from Watch rather than requiring iPhone sending it.
 - Main WatchOS app should be better. Right now I've prioritised the complications that I use, and I don't use the main app.
 - More WatchOS complications.
 - Historical Usage. I have the API reading these from the Amber API (disabled...) but no UI implemented.

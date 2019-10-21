@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Background app fetch - every 15 minutes
-        UIApplication.shared.setMinimumBackgroundFetchInterval(900)
+        UIApplication.shared.setMinimumBackgroundFetchInterval(15*60)
         
         // Request local notification support from user
         let center = UNUserNotificationCenter.current()

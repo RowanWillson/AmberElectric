@@ -24,17 +24,13 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         session.activate()
     }
     
-
-    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         
-    }
-    
     // Receive data here from iPhone app (UserDefaults key+data pairs). Insert into local UserDefaults.
     // Used for username & password and Complication Data
     // TODO: Process Complication data ...
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         let defaults = UserDefaults.shared
-        for credential in userInfo {
+        for credential in applicationContext {
             defaults.set(credential.value, forKey: credential.key)
         }
         defaults.synchronize()
