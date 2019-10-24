@@ -24,6 +24,7 @@ MIT
 - [x] Predicted Prices (30min increments)
 - [x] Background fetch
 - [x] Local Notification when prices below $0.00
+- [ ] Dark Mode
 - [ ] Historical prices
 - [ ] Historical account usage
 - [ ] Localization
