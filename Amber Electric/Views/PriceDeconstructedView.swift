@@ -79,6 +79,7 @@ class PriceDeconstructedView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.systemFont(ofSize: 16.0)
+        label.textColor = .black
         return label
     }()
     
@@ -99,6 +100,7 @@ class PriceDeconstructedView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
+        label.textColor = .black
         label.clipsToBounds = false
         return label
     }()
@@ -108,6 +110,7 @@ class PriceDeconstructedView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
+        label.textColor = .black
         label.clipsToBounds = false
         return label
     }()
