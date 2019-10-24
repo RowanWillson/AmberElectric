@@ -1,6 +1,8 @@
 # AmberElectric
 Unofficial Amber Electric iOS / WatchOS client
 
+Download here: [https://apps.apple.com/au/app/amber-electric-unofficial/id1482475581?mt=8](https://apps.apple.com/au/app/amber-electric-unofficial/id1482475581?mt=8).
+
 This is a developer/hobbyist implementation of a native iOS app to display live Amber Electric retail electricity prices. To create an account with Amber Electric firstly visit the [Amber Electric Website](https://www.amberelectric.com.au).
 
 **LICENSE**
