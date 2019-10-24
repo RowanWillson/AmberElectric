@@ -102,7 +102,7 @@ class InterfaceController: WKInterfaceController, AmberAPIDelegate {
         self.mainLabel.setText("\(priceRounded)¢")
         self.kWhLabel.setHidden(false)
         let renewableRounded = Int(data.currentRenewableInGrid)
-        self.renewablesLabel.setText("Clean \(renewableRounded)%")
+        self.renewablesLabel.setText("\(renewableRounded)% Clean")
         self.circle.setBackgroundColor(Appearance.circleColour(from: data.currentPriceColor))
     }
 
