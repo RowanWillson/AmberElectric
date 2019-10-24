@@ -12,7 +12,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        WKExtension.shared().scheduleBackgroundRefresh(withPreferredDate: Date().nextMinutes(minutes: 30, plusSeconds: 5), userInfo: nil) { (error) in
+        WKExtension.shared().scheduleBackgroundRefresh(withPreferredDate: Date().nextMinutes(minutes: 15, plusSeconds: 5), userInfo: nil) { (error) in
             //successfully scheduled.
             //Note: There is an error in Apple documentation that says this completion handler is called for the actual refresh. This is incorrect - the handle() delegate method is called for the actual refresh event. Don't do anything in here.
         }
@@ -35,7 +35,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             case let backgroundTask as WKApplicationRefreshBackgroundTask:
                 AmberAPI.shared.update { (result) in
                     //schedule next update
-                    WKExtension.shared().scheduleBackgroundRefresh(withPreferredDate: Date().nextMinutes(minutes: 30, plusSeconds: 5), userInfo: nil, scheduledCompletion: { (_) in
+                    WKExtension.shared().scheduleBackgroundRefresh(withPreferredDate: Date().nextMinutes(minutes: 15, plusSeconds: 5), userInfo: nil, scheduledCompletion: { (_) in
                         // schedule worked. As above per Apple docs error: this completion handler is called immediately. Do nothing in here.
                     })
                     //snapshot if there's new data. Otherwise signal completed work and don't snapshot.
