@@ -41,8 +41,8 @@ class InterfaceController: WKInterfaceController, AmberAPIDelegate {
             if result == .failWrongCredentials {
                 // Handled below by delegate (not required in this completion handler)
             } else if result == .failOther {
-                let okAction = WKAlertAction(title: "Ok", style: .default, handler: {})
-                self.presentAlert(withTitle: "Error", message: "Connection error", preferredStyle: .alert, actions: [okAction])
+//                let okAction = WKAlertAction(title: "Ok", style: .default, handler: {})
+//                self.presentAlert(withTitle: "Error", message: "Connection error", preferredStyle: .alert, actions: [okAction])
             } else if result == .successFromNetwork {
                 //Update Complication with new (non-cached) data
                 let server = CLKComplicationServer.sharedInstance()

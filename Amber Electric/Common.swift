@@ -87,10 +87,10 @@ extension UserDefaults {
 
 /* Grab Date of next X whole minutes, e.g. 30, 00 */
 extension Date {
-    func nextMinutes(minutes : Double = 30.0, plusSeconds seconds : TimeInterval = 0) -> Date {
+    func nextMinutes(minutes : Double = 15.0, plusSeconds seconds : TimeInterval = 0) -> Date {
         let timestamp = self.timeIntervalSinceReferenceDate
         let current = timestamp - fmod(timestamp, minutes*60.0)  //round down to whole X mins
-        let next = current + minutes*60.0 + seconds  //add 5 seconds to ensure API request performed *after* server updated with new times.
+        let next = current + minutes*60.0 + seconds  //add N seconds to ensure API request performed *after* server updated with new times.
         return Date(timeIntervalSinceReferenceDate: next)
     }
 }

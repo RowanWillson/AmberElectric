@@ -151,7 +151,7 @@ class AmberAPI {
         
         /* 15 minute timer */
         if timer == nil {
-            timer = Timer(fire: Date().nextMinutes(minutes: 15, plusSeconds: 5), interval: 60*15, repeats: true, block: { (_) in
+            timer = Timer(fire: Date().nextMinutes(minutes: 15, plusSeconds: 15), interval: 60*15, repeats: true, block: { (_) in
                 self.login(completionHandler: nil)  //login again on next half hour boundary
             })
         }
