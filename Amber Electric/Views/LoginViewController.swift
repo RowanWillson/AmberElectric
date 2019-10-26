@@ -18,7 +18,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
         
         view.addSubview(vStack)
         vStack.addArrangedSubview(logoImageView)
@@ -77,6 +81,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.delegate = self
         textField.font = UIFont.systemFont(ofSize: 18.0)
+        if #available(iOS 13.0, *) {
+            textField.backgroundColor = .secondarySystemBackground
+        } else {
+            textField.backgroundColor = .white
+        }
         return textField
     }()
     
@@ -92,6 +101,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.returnKeyType = UIReturnKeyType.go
         textField.font = UIFont.systemFont(ofSize: 18.0)
         textField.delegate = self
+        if #available(iOS 13.0, *) {
+            textField.backgroundColor = .secondarySystemBackground
+        } else {
+            textField.backgroundColor = .white
+        }
         return textField
     }()
     
