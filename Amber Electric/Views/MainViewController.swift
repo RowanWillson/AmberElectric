@@ -16,7 +16,9 @@ class MainViewController: UIViewController, AmberAPIDelegate {
         super.viewDidLoad()
         
         if #available(iOS 13.0, *) {
-            self.view.backgroundColor = .systemBackground
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
         }
         
         AmberAPI.shared.delegate = self

@@ -81,6 +81,8 @@ class PriceDeconstructedView: UIView {
         label.font = UIFont.systemFont(ofSize: 16.0)
         if #available(iOS 13.0, *) {
             label.textColor = .label
+        } else {
+            label.textColor = .black
         }
         return label
     }()
@@ -104,6 +106,8 @@ class PriceDeconstructedView: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         if #available(iOS 13.0, *) {
             label.textColor = .label
+        } else {
+            label.textColor = .black
         }
         label.clipsToBounds = false
         return label
@@ -116,6 +120,8 @@ class PriceDeconstructedView: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         if #available(iOS 13.0, *) {
             label.textColor = .secondaryLabel
+        } else {
+            label.textColor = .black
         }
         label.clipsToBounds = false
         return label

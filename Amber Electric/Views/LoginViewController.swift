@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
             view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
         }
         
         view.addSubview(vStack)
@@ -81,6 +83,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.font = UIFont.systemFont(ofSize: 18.0)
         if #available(iOS 13.0, *) {
             textField.backgroundColor = .secondarySystemBackground
+        } else {
+            textField.backgroundColor = .white
         }
         return textField
     }()
@@ -99,6 +103,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.delegate = self
         if #available(iOS 13.0, *) {
             textField.backgroundColor = .secondarySystemBackground
+        } else {
+            textField.backgroundColor = .white
         }
         return textField
     }()
