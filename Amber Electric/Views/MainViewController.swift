@@ -15,11 +15,7 @@ class MainViewController: UIViewController, AmberAPIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
-        } else {
-            view.backgroundColor = .white
-        }
+        view.backgroundColor = .systemBackground
         
         AmberAPI.shared.delegate = self
         
@@ -156,11 +152,7 @@ class MainViewController: UIViewController, AmberAPIDelegate {
     
     private lazy var nameLabel : UILabel = {
         let label = UILabel()
-        if #available(iOS 13.0, *) {
-            label.textColor = .label
-        } else {
-            label.textColor = .black
-        }
+        label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

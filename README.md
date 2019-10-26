@@ -10,7 +10,7 @@ MIT
 
 **Platform support**:
 
-- [x] iPhone (iOS 12.4+)
+- [x] iPhone (iOS 13.0+)
 - [x] iPhone Today Extension (home screen widget)
 - [x] Apple Watch Extension (including complications)
 - [ ] iPad
@@ -26,7 +26,7 @@ MIT
 - [x] Predicted Prices (30min increments)
 - [x] Background fetch
 - [x] Local Notification when prices below $0.00
-- [ ] Dark Mode
+- [x] Dark Mode
 - [ ] Historical prices
 - [ ] Historical account usage
 - [ ] Localization
