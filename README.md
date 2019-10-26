@@ -30,6 +30,7 @@ MIT
 - [ ] Historical prices
 - [ ] Historical account usage
 - [ ] Localization
+- [ ] Siri shortcuts
 
 **WatchOS Features & Complications**
 - [x] Native login on WatchApp
