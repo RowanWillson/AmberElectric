@@ -15,6 +15,10 @@ class MainViewController: UIViewController, AmberAPIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 13.0, *) {
+            self.view.backgroundColor = .systemBackground
+        }
+        
         AmberAPI.shared.delegate = self
         
         // Add subviews
