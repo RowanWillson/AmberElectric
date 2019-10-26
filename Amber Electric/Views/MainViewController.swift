@@ -154,7 +154,11 @@ class MainViewController: UIViewController, AmberAPIDelegate {
     
     private lazy var nameLabel : UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        if #available(iOS 13.0, *) {
+            label.textColor = .label
+        } else {
+            label.textColor = .black
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
