@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AmberAPI.shared.update { (result) in
             if result == .successFromNetwork {
                 // Local Notification if new price less than zero!
-                if let price = AmberAPI.shared.currentPriceData?.data.currentPriceKWH, price < 0.0 {
+                if let price = AmberAPI.shared.currentPriceData?.data.currentPriceKWH, (price < 0.0 || price > 200.0) {
                     self.sendPriceNotification()
                 }
                 completionHandler(.newData)
