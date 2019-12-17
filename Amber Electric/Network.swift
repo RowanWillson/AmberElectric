@@ -139,7 +139,7 @@ class AmberAPI {
 
     weak var delegate : AmberAPIDelegate?
     
-    private var timer : Timer?  //every 15 mins at xx:00:05 and xx:15:05
+    private var timer : Timer?  //every 5 mins at xx:00:15 and xx:05:15
     
     /* Downloaded Data */
     var authData : AuthData?
@@ -151,7 +151,7 @@ class AmberAPI {
         
         /* 15 minute timer */
         if timer == nil {
-            timer = Timer(fire: Date().nextMinutes(minutes: 15, plusSeconds: 15), interval: 60*15, repeats: true, block: { (_) in
+            timer = Timer(fire: Date().nextMinutes(minutes: 5, plusSeconds: 15), interval: 60*5, repeats: true, block: { (_) in
                 self.login(completionHandler: nil)  //login again on next half hour boundary
             })
         }
@@ -166,9 +166,9 @@ class AmberAPI {
 
         let defaults = UserDefaults.shared
 
-        /* Firstly check cached currentPriceData for a result in the current time block and return that if appropriate (avoid unnecessary network calls). Assumes data does not change in each 15 minute time period. */
+        /* Firstly check cached currentPriceData for a result in the current time block and return that if appropriate (avoid unnecessary network calls). Assumes data does not change in each 5 minute time period. */
         if let currentCachedTime = currentPriceData?.data.currentPricePeriod {
-            let nextValidTimePeriod = currentCachedTime.nextMinutes(minutes: 15)
+            let nextValidTimePeriod = currentCachedTime.nextMinutes(minutes: 5)
             if nextValidTimePeriod.timeIntervalSinceNow > 0 {
                 #if DEBUG
                 print("\(Date().description): Returning Cached Data: " + currentCachedTime.description + " \(currentPriceData?.data.currentPriceKWH ?? 0)c")
